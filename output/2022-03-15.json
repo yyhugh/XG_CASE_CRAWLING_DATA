@@ -1,0 +1,47 @@
+[
+  {
+    "id": "2022-03-15--78",
+    "createTime": "2022-03-15",
+    "name": "病例78",
+    "sex": 1,
+    "age": 53,
+    "address": "盐田区盐田街道海港大厦",
+    "source": 2,
+    "position": {
+      "name": "海港大厦(临海路)",
+      "id": "B02F37VB0W",
+      "location": "114.253688,22.568741",
+      "type": "商务住宅;楼宇;商务写字楼",
+      "typecode": "120201",
+      "pname": "广东省",
+      "cityname": "深圳市",
+      "adname": "盐田区",
+      "address": "深盐路1289",
+      "pcode": "440000",
+      "citycode": "0755",
+      "adcode": "440308"
+    }
+  },
+  {
+    "id": "2022-03-15--79",
+    "createTime": "2022-03-15",
+    "name": "病例79",
+    "sex": 2,
+    "age": null,
+    "source": 1,
+    "position": {
+      "name": "UNdefined cafe",
+      "id": "B0H30UE60S",
+      "location": "113.927636,22.506948",
+      "type": "餐饮服务;咖啡厅;咖啡厅",
+      "typecode": "050500",
+      "pname": "广东省",
+      "cityname": "深圳市",
+      "adname": "南山区",
+      "address": "粤海街道南商路南门一坊A133",
+      "pcode": "440000",
+      "citycode": "0755",
+      "adcode": "440305"
+    }
+  }
+]

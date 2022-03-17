@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    /* 基础选项 */
+    "target": "esnext",                           // 编译输出的ECMAScript目标版本
+    "module": "commonjs",                         // 开发使用的模块规范
+    "strict": true,                               // 严格模式
+    "jsx": "preserve",                            // https://www.tslang.cn/docs/handbook/jsx.html
+    "skipLibCheck": true,                         // 跳过声明文件的类型检查
+    "esModuleInterop": true,                      // 不同规范的模块编译后都能通过`__esModule`来判断是否为es模块
+    "forceConsistentCasingInFileNames": true,     // 引入文件名区分大小写
+    "useDefineForClassFields": true,
+    "sourceMap": true,                            // 源码位置映射
+    "baseUrl": ".",                               // 项目根路径
+    "outDir": "dist",                             // 输出路径
+
+    /* 模块解析选项 */
+    "moduleResolution": "node",                   // 模块解析策略。node默认以index为入口文件
+    "allowSyntheticDefaultImports": true,         // 允许合成默认导入(`import * as _`回归`import _`)
+    "resolveJsonModule": true,                    // 解析JSON文件
+    "allowJs": true,                              // 允许编译JS文件
+
+    /* 其他选项 */
+    "experimentalDecorators": true,               // 启用装饰器
+    "emitDecoratorMetadata": true,                // 为装饰器提供元数据的支持
+
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "data",
+    "output",
+    "dist"
+  ]
+}
