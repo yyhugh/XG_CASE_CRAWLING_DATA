@@ -17,8 +17,6 @@ export function saveFile(data: any, name: string) {
   const dataJSON = JSON.stringify(data, null, 2);
   const baseUrl = path.resolve(__dirname, "../../../", "output");
   const filename = path.resolve(baseUrl, `${name}.json`);
-  console.log("baseUrl", baseUrl);
-  console.log(filename);
   // 检查输出文件夹是否存在
   if (!fs.existsSync(baseUrl)) {
     // 不存在则先创建
