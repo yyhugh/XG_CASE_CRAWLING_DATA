@@ -51,23 +51,28 @@ fileList.forEach((file, i) => {
   // 转换层
   const personList: Array<IPerson> = [];
   infoList.forEach((info) => {
-    // 来源
-    let source = CASE_SOURCE.intimate;
-    if (info.source.includes("社区筛查")) {
-      source = CASE_SOURCE.community;
-    } else if (info.source.includes("重点区域")) {
-      source = CASE_SOURCE.keyArea;
+    try {
+      // 来源
+      let source = CASE_SOURCE.intimate;
+      if (info.source.includes("社区筛查")) {
+        source = CASE_SOURCE.community;
+      } else if (info.source.includes("重点区域")) {
+        source = CASE_SOURCE.keyArea;
+      }
+      personList.push({
+        id: `${date}--${info.id}`,
+        createTime: date,
+        name: info.name,
+        sex: info.sex === "男" ? SEX.man : SEX.woman,
+        age: Number.parseInt(info.age),
+        address: info.address,
+        source,
+        position: undefined,
+      });
+    } catch (error) {
+      console.error(error);
+      console.log("info", info);
     }
-    personList.push({
-      id: `${date}--${info.id}`,
-      createTime: date,
-      name: info.name,
-      sex: info.sex === "男" ? SEX.man : SEX.woman,
-      age: Number.parseInt(info.age),
-      address: info.address,
-      source,
-      position: undefined,
-    });
   });
 
   // 通过高德地图API查询地理信息
